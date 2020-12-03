@@ -4,6 +4,7 @@
 #_____bank
 #Black_____
 #_____bottom
+#_____bridge (exclude "_____ Bridge" template?)
 #_____bury
 #_____by
 #_____caster?
@@ -26,6 +27,7 @@
 #_____mouth
 #_____ney
 #_____pool
+#_____ridge (exclude "_____ Ridge" template?)
 #_____row
 #_____sea
 #_____(s)end
@@ -61,6 +63,7 @@
 #City _____
 #_____ Court
 #_____ Cross
+#_____ docks <<< SKIPPED
 #_____ End
 #_____ Exchange
 #_____ Garden(s)
@@ -70,29 +73,31 @@
 #High _____
 #Higher _____
 #_____ Hill
-#Inner _____
+#Inner _____ <<< SKIPPED
 #_____ Junction
 #_____ Lane
-#Little _____
-#Lower _____
+#Little _____ <<< should be paired with blank template?
+#Lower _____ <<< should be paired with blank template?
 #_____ Main
 #_____ Market
-#Old _____
+#Old _____ <<< should be paired with new?
 #_____ Palace
 #_____ Park
+#_____ Quarter <<< SKIPPED
 #_____ Quays
+#_____ Ridge
 #_____ Rise
 #_____ Road
 #Royal _____
-#Saint _____
+#Saint _____ <<< Bespoke code that can add "'s road/street/lane" to the end of this?
 #_____ Square
 #_____ Street
 #_____ Tower
 #_____ Town
+#Upper _____
 #_____ Vale
 #_____ Walk
 #_____ Way
-#_____ Weir
 #_____ Wharf
 #_____ Wood(s)
 
@@ -140,7 +145,6 @@
 #Grove
 #Hamlet
 #Harbour
-#High Street
 #House
 #King('s)
 #Manor
@@ -155,6 +159,7 @@
 #Pond
 #Queen('s)
 #Rectory
+#Regent
 #Runway
 #Stables
 #Stadium
@@ -164,6 +169,12 @@
 #Water (exclude "_____water" template?)
 #Weir
 #Yard
+
+
+#Exclude:
+#Names that already exist on the map
+#Names that are over X length
+#Names that are on the real tube map?
 
 
 def main():

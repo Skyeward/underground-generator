@@ -3,27 +3,37 @@
     [
         {
             "text":"bridge",
-            "start_position":false,
-            "end_position":true,
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
             "percent_ratio":25,
             "uniqueness":"limited",
             "optional_formatting":
             [
                 {
                     "format":"#",
-                    "percent_ratio":100
+                    "percent_ratio":100,
+                    "available_nonrandom":true
                 },
                 {
                     "format":"#s",
-                    "percent_ratio":10
+                    "percent_ratio":10,
+                    "available_nonrandom":false
                 },
                 {
                     "format":"draw#",
-                    "percent_ratio":10
+                    "percent_ratio":10,
+                    "available_nonrandom":true
                 },
                 {
                     "format":"#water",
-                    "percent_ratio":2
+                    "percent_ratio":2,
+                    "available_nonrandom":true
                 }
             ],
             "tags":
@@ -33,28 +43,1133 @@
         },
         {
             "text":"canal",
-            "start_position":false,
-            "end_position":true,
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
             "percent_ratio":10,
             "uniqueness":"unique",
             "optional_formatting":
             [
                 {
                     "format":"#",
-                    "percent_ratio":100
+                    "percent_ratio":100,
+                    "available_nonrandom":true
                 },
                 {
                     "format":"lock",
-                    "percent_ratio":50
+                    "percent_ratio":50,
+                    "available_nonrandom":true
                 },
                 {
                     "format":"locks",
-                    "percent_ratio":50
+                    "percent_ratio":50,
+                    "available_nonrandom":false
                 }
             ],
             "tags":
             [
-                "water", "transport", "traditional"
+                "traditional", "transport", "water"
+            ]
+        },
+        {
+            "text":"carriageway",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":15,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route", "traditional"
+            ]
+        },
+        {
+            "text":"central",
+            "neighbours":
+            [
+
+            ],
+            "start_position":false,
+            "end_position":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"church",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":30,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"chapel",
+                    "percent_ratio":50,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"cathedral",
+                    "percent_ratio":25,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "building", "traditional"
+            ]
+        },
+        {
+            "text":"city",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":10,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"court",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":100,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                },
+                {
+                    "format":"#house",
+                    "percent_ratio":1,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "building", "traditional"
+            ]
+        },
+        {
+            "text":"cross",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":40,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"end",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":10,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"exchange",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":75,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "building", "trade", "traditional"
+            ]
+        },
+        {
+            "text":"garden",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":true,
+            "percent_ratio":100,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
+            ]
+        },
+        {
+            "text":"greater",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":50,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"green",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":50,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
+            ]
+        },
+        {
+            "text":"heath",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":20,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
+            ]
+        },
+        {
+            "text":"high",
+            "neighbours":
+            [
+                {
+                    "name":"higher",
+                    "percent_ratio":20
+                },
+                {
+                    "name":"lower",
+                    "percent_ratio":50
+                }
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":75,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"higher",
+            "neighbours":
+            [
+                {
+                    "name":"highest",
+                    "percent_ratio":10
+                }
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":0,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"highest",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":0,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"hill",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":true,
+            "end_nonrandom":true,
+            "percent_ratio":50,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "elevated"
+            ]
+        },
+        {
+            "text":"junction",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"lane",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":true,
+            "percent_ratio":100,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"little",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"lower",
+            "neighbours":
+            [
+                {
+                    "name":"upper",
+                    "percent_ratio":30
+                }
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":40,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"main",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"market",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":75,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "building", "trade", "traditional"
+            ]
+        },
+        {
+            "text":"old",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":75,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "building", "trade", "traditional"
+            ]
+        },
+        {
+            "text":"palace",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"royal #",
+                    "percent_ratio":10,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "building", "traditional"
+            ]
+        },
+        {
+            "text":"park",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":50,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":40,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
+            ]
+        },
+        {
+            "text":"quays",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "traditional", "transport", "water"
+            ]
+        },
+        {
+            "text":"ridge",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":10,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "elevated", "natural"
+            ]
+        },
+        {
+            "text":"rise",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":10,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "elevated", "natural"
+            ]
+        },
+        {
+            "text":"road",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":true,
+            "percent_ratio":100,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"royal",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":20,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "traditional"
+            ]
+        },
+        {
+            "text":"saint",
+            "neighbours":
+            [
+
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "traditional"
+            ]
+        },
+        {
+            "text":"square",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":75,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+        
+            ]
+        },
+        {
+            "text":"street",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":true,
+            "percent_ratio":100,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"high #",
+                    "percent_ratio":10,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"tower",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":40,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                }
+            ],
+            "tags":
+            [
+                "building", "traditional"
+            ]
+        },
+        {
+            "text":"town",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":100,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "traditional"
+            ]
+        },
+        {
+            "text":"upper",
+            "neighbours":
+            [
+                {
+                    "name":"lower",
+                    "percent_ratio":30
+                }
+            ],
+            "start_template":true,
+            "end_template":false,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":40,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+
+            ]
+        },
+        {
+            "text":"vale",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
+            ]
+        },
+        {
+            "text":"walk",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":10,
+            "uniqueness":"unique",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route", "traditional"
+            ]
+        },
+        {
+            "text":"way",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":50,
+            "uniqueness":"unlimited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "route"
+            ]
+        },
+        {
+            "text":"wharf",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":false,
+            "end_nonrandom":false,
+            "percent_ratio":100,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "building", "transport", "water"
+            ]
+        },
+        {
+            "text":"wood",
+            "neighbours":
+            [
+
+            ],
+            "start_template":false,
+            "end_template":true,
+            "start_nonrandom":true,
+            "end_nonrandom":false,
+            "percent_ratio":25,
+            "uniqueness":"limited",
+            "optional_formatting":
+            [
+                {
+                    "format":"#",
+                    "percent_ratio":100,
+                    "available_nonrandom":true
+                },
+                {
+                    "format":"#s",
+                    "percent_ratio":100,
+                    "available_nonrandom":false
+                }
+            ],
+            "tags":
+            [
+                "natural", "traditional"
             ]
         }
     ],
