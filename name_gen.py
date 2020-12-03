@@ -21,6 +21,7 @@
 #_____hall
 #_____ham
 #_____ing
+#_____land
 #_____ley
 #Middle_____
 #_____minster
@@ -30,7 +31,7 @@
 #_____ridge (exclude "_____ Ridge" template?)
 #_____row
 #_____sea
-#_____(s)end
+#_____send <<<< remove?
 #_____sey
 #_____side
 #_____smith
@@ -39,10 +40,10 @@
 #_____stone
 #_____stow
 #_____ton
-#Up_____
+#Up_____ <<< might not work, remove?
 #_____wake
 #_____wall
-#_____wark
+#_____wark <<< might not work, remove?
 #_____water
 #____way (exclude "_____ Way" template?)
 #_____well
@@ -54,7 +55,7 @@
 
 #PHRASE TEMPLATES:
 #_____
-#_____ Airport?
+#_____ Airport? <<< SKIPPED
 #_____ Bridge
 #_____ Canal
 #_____ Carriageway
@@ -175,10 +176,34 @@
 #Names that already exist on the map
 #Names that are over X length
 #Names that are on the real tube map?
+#Where one word in the phrase is contained in the other word
+
+
+import json
 
 
 def main():
-    pass
+    particles, template_words = load_word_data()
+    generate_random_word(particles)
+
+
+def load_word_data():
+    try:
+        with open("word_bank.json", "r") as word_bank_file:
+            word_data = json.load(word_bank_file)
+    except:
+        print("Problem loading json") 
+        exit()
+    
+    #response_json = response_json.decode('utf-8')
+    particles = word_data["particles"]
+    template_words = word_data["words"]
+
+    return particles, template_words
+
+
+def generate_random_word(particles):
+    print(particles[0]["text"])
 
 
 if __name__ == "__main__":
