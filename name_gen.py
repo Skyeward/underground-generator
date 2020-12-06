@@ -177,33 +177,64 @@
 #Names that are over X length
 #Names that are on the real tube map?
 #Where one word in the phrase is contained in the other word
+#within a consonant, ban *x__*x (eg. brofr, pleagl)
 
 
 import json
+import random
+
+
+class WordData(raw_word_data):
+    def __init__(self):
+        self.name = None
+        self.favourite_drink = None
 
 
 def main():
-    particles, template_words = load_word_data()
-    generate_random_word(particles)
+    particles, template_words, phonemes = load_word_data()
+    generate_random_word(particles, phonemes)
 
 
 def load_word_data():
     try:
         with open("word_bank.json", "r") as word_bank_file:
-            word_data = json.load(word_bank_file)
+            raw_word_data = json.load(word_bank_file)
     except:
         print("Problem loading json") 
         exit()
     
-    #response_json = response_json.decode('utf-8')
     particles = word_data["particles"]
     template_words = word_data["words"]
+    phonemes = word_data["phonemes"]
 
-    return particles, template_words
+    return particles, template_words, phonemes
 
 
-def generate_random_word(particles):
-    print(particles[0]["text"])
+def generate_random_word(particles, phonemes):
+    random_particle = random.choice(particles)
+    is_monosyllabic = random.choice([True, False])
+
+    generate_first_syllable(is_monosyllabic, phonemes)
+
+
+
+def generate_first_syllable(is_last_syllable, phonemes):
+    
+    phonemes = []
+
+
+
+    return "".join(phonemes)
+
+
+def choose_consonants_and_vowels():
+    choices = ["consonant", "vowel"]
+    first_phoneme_weightings = [9, 1]
+    consonants_and_vowels = []
+    phoneme_count = random.range(1, 4)
+
+    for i in range(phoneme_count)
+
 
 
 if __name__ == "__main__":
