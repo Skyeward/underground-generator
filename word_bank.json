@@ -28,7 +28,7 @@
                 {
                     "format":"draw#",
                     "percent_ratio":10,
-                    "available_nonrandom":true
+                    "available_nonrandom":false
                 },
                 {
                     "format":"#water",
