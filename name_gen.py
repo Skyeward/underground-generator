@@ -129,6 +129,7 @@
 #Chapel
 #Cobbles
 #Corner
+#Coronation
 #Cottage
 #Court
 #Creek
@@ -147,6 +148,7 @@
 #Hamlet
 #Harbour
 #House
+#Jubilee
 #King('s)
 #Manor
 #Meadows
@@ -180,6 +182,8 @@
 #within a syllable, ban *x__*x (eg. brofr, pleagl)
 #within a syllable, ban x*___x* eg. (bob, dreds)
 
+#LONG VOWELS NEED TO BE FOLLOWED BY A CONSONANT THAT'S ALLOWED AT THE START
+#WHERE THERE ARE DOUBLE CONSONANTS, THE IT MUST BE NON-START+START
 
 import json
 import random

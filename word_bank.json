@@ -1650,6 +1650,72 @@
                 "requires_vowel_before":true,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
+            },
+            {
+                "text":"h",
+                "only_start":true,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"k",
+                "only_start":true,
+                "available_at_start":true,
+                "blacklist_next_consonant":
+                [
+                    "nt"
+                ],
+                "requires_vowel_before":false,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ks",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"l",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":true
+            },
+            {
+                "text":"lch",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"lk",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ll",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
             }
         ],
         "vowels":
@@ -1657,6 +1723,7 @@
             {
                 "text":"a",
                 "allowed_at_start":true,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1665,6 +1732,7 @@
             {
                 "text":"e",
                 "allowed_at_start":true,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1673,6 +1741,7 @@
             {
                 "text":"i",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1681,6 +1750,7 @@
             {
                 "text":"o",
                 "allowed_at_start":true,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1689,6 +1759,7 @@
             {
                 "text":"u",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1697,6 +1768,7 @@
             {
                 "text":"y",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1705,6 +1777,7 @@
             {
                 "text":"ai",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1713,6 +1786,7 @@
             {
                 "text":"air",
                 "allowed_at_start":true,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1724,6 +1798,7 @@
             {
                 "text":"aigh",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1732,6 +1807,7 @@
             {
                 "text":"ar",
                 "allowed_at_start":true,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1740,6 +1816,7 @@
             {
                 "text":"aw",
                 "allowed_at_start":true,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1748,6 +1825,7 @@
             {
                 "text":"ay",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1756,6 +1834,7 @@
             {
                 "text":"ea",
                 "allowed_at_start":true,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1764,6 +1843,7 @@
             {
                 "text":"ear",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1775,6 +1855,7 @@
             {
                 "text":"ee",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1783,6 +1864,7 @@
             {
                 "text":"ei",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":
                 [
                     "k",
@@ -1801,6 +1883,7 @@
             {
                 "text":"eigh",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1809,6 +1892,7 @@
             {
                 "text":"er",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1817,6 +1901,7 @@
             {
                 "text":"ew",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1825,6 +1910,7 @@
             {
                 "text":"ey",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1833,6 +1919,7 @@
             {
                 "text":"ia",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":[
                     "br",
                     "fr",
@@ -1850,6 +1937,7 @@
             {
                 "text":"ie",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1858,6 +1946,7 @@
             {
                 "text":"igh",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1869,6 +1958,7 @@
             {
                 "text":"io",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1880,6 +1970,7 @@
             {
                 "text":"ior",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":
                 [
                     "br",
@@ -1895,6 +1986,7 @@
             {
                 "text":"ir",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1903,6 +1995,7 @@
             {
                 "text":"oa",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1911,6 +2004,7 @@
             {
                 "text":"oar",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1922,6 +2016,7 @@
             {
                 "text":"oi",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1933,6 +2028,7 @@
             {
                 "text":"oo",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1941,6 +2037,7 @@
             {
                 "text":"ou",
                 "allowed_at_start":false,
+                "long_vowel": false,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1949,6 +2046,7 @@
             {
                 "text":"ough",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1957,6 +2055,7 @@
             {
                 "text":"our",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1968,6 +2067,7 @@
             {
                 "text":"ow",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1976,6 +2076,7 @@
             {
                 "text":"oy",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
@@ -1984,6 +2085,7 @@
             {
                 "text":"ur",
                 "allowed_at_start":false,
+                "long_vowel": true,
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
