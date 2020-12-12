@@ -2014,7 +2014,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2071,7 +2072,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2174,7 +2176,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2182,11 +2185,15 @@
                 "allowed_at_start":false,
                 "long_vowel": false,
                 "whitelist_prefix":null,
-                "blacklist_prefix":null,
+                "blacklist_prefix":
+                [
+                    "c"
+                ],
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2202,7 +2209,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2232,7 +2240,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2244,7 +2253,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
@@ -2283,7 +2293,8 @@
                 "whitelist_suffix":null,
                 "blacklist_suffix":
                 [
-                    "b"
+                    "b",
+                    "bs"
                 ]
             },
             {
