@@ -492,8 +492,8 @@
             [
 
             ],
-            "start_template":true,
-            "end_template":false,
+            "start_template":false,
+            "end_template":true,
             "start_nonrandom":true,
             "end_nonrandom":true,
             "percent_ratio":50,
@@ -675,8 +675,8 @@
             [
 
             ],
-            "start_template":false,
-            "end_template":true,
+            "start_template":true,
+            "end_template":false,
             "start_nonrandom":true,
             "end_nonrandom":false,
             "percent_ratio":75,
@@ -1478,7 +1478,14 @@
                 "text":"bl",
                 "only_start":false,
                 "available_at_start":true,
-                "blacklist_next_consonant":null,
+                "blacklist_next_consonant":
+                [
+                    "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt"
+                ],
                 "requires_vowel_before":false,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
@@ -1544,7 +1551,14 @@
                 "text":"cl",
                 "only_start":false,
                 "available_at_start":true,
-                "blacklist_next_consonant":null,
+                "blacklist_next_consonant":
+                [
+                    "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt"
+                ],
                 "requires_vowel_before":true,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
@@ -1616,7 +1630,14 @@
                 "text":"fl",
                 "only_start":false,
                 "available_at_start":true,
-                "blacklist_next_consonant":null,
+                "blacklist_next_consonant":
+                [
+                    "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt"
+                ],
                 "requires_vowel_before":true,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
@@ -1643,7 +1664,14 @@
                 "text":"gl",
                 "only_start":false,
                 "available_at_start":true,
-                "blacklist_next_consonant":null,
+                "blacklist_next_consonant":
+                [
+                    "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt"
+                ],
                 "requires_vowel_before":false,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
@@ -1868,15 +1896,6 @@
                 "vowel_link_double_available":false
             },
             {
-                "text":"nv",
-                "only_start":false,
-                "available_at_start":false,
-                "blacklist_next_consonant":null,
-                "requires_vowel_before":true,
-                "requires_vowel_after":true,
-                "vowel_link_double_available":false
-            },
-            {
                 "text":"p",
                 "only_start":false,
                 "available_at_start":true,
@@ -1907,7 +1926,14 @@
                 "text":"pl",
                 "only_start":false,
                 "available_at_start":true,
-                "blacklist_next_consonant":null,
+                "blacklist_next_consonant":
+                [
+                    "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt"
+                ],
                 "requires_vowel_before":false,
                 "requires_vowel_after":true,
                 "vowel_link_double_available":false
@@ -2003,7 +2029,11 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll",
+                    "nd"
+                ]
             },
             {
                 "text":"air",
@@ -2015,7 +2045,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2025,16 +2056,25 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ar",
                 "allowed_at_start":true,
                 "long_vowel": true,
                 "whitelist_prefix":null,
-                "blacklist_prefix":null,
+                "blacklist_prefix":
+                [
+                    "chr"
+                ],
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"aw",
@@ -2043,7 +2083,12 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll",
+                    "w",
+                    "wr"
+                ]
             },
             {
                 "text":"ay",
@@ -2052,7 +2097,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ea",
@@ -2061,7 +2109,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ear",
@@ -2073,7 +2124,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2083,7 +2135,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ei",
@@ -2093,6 +2148,10 @@
                 [
                     "k",
                     "l",
+                    "ll",
+                    "lm",
+                    "ls",
+                    "lt",
                     "sk"
                 ],
                 "blacklist_prefix":null,
@@ -2111,7 +2170,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"er",
@@ -2120,7 +2182,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ew",
@@ -2129,7 +2194,12 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll",
+                    "w",
+                    "wr"
+                ]
             },
             {
                 "text":"ey",
@@ -2138,7 +2208,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ia",
@@ -2165,7 +2238,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"igh",
@@ -2177,7 +2253,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2193,7 +2270,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2210,7 +2288,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2220,7 +2299,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"oa",
@@ -2229,7 +2311,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"oar",
@@ -2241,7 +2326,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2254,7 +2340,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2264,7 +2351,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ou",
@@ -2273,7 +2363,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ough",
@@ -2282,7 +2375,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"our",
@@ -2294,7 +2390,8 @@
                 "blacklist_suffix":
                 [
                     "b",
-                    "bs"
+                    "bs",
+                    "ll"
                 ]
             },
             {
@@ -2304,7 +2401,12 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll",
+                    "w",
+                    "wr"
+                ]
             },
             {
                 "text":"oy",
@@ -2313,7 +2415,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             },
             {
                 "text":"ur",
@@ -2322,7 +2427,10 @@
                 "whitelist_prefix":null,
                 "blacklist_prefix":null,
                 "whitelist_suffix":null,
-                "blacklist_suffix":null
+                "blacklist_suffix":
+                [
+                    "ll"
+                ]
             }
         ]
     }

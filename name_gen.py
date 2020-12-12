@@ -298,7 +298,9 @@ class WordData():
 
 def main():
     word_data = load_word_data()
-    generate_random_word(word_data)
+    template = generate_random_template(word_data)
+    word = generate_random_word(word_data)
+    return template.replace("@", word).title()
 
 
 def load_word_data():
@@ -312,6 +314,27 @@ def load_word_data():
     word_data = WordData(raw_word_data)
 
     return word_data
+
+
+def generate_random_template(word_data):
+    weightings = []
+
+    for template in word_data.template_words:
+        weightings.append(template["percent_ratio"])
+
+    random_template = random.choices(word_data.template_words, weightings)[0]
+    template_text = random_template["text"]
+    print(template_text)
+
+    if random_template["start_template"] == True and random_template["end_template"] == True:
+        if random.randrange(0, 2) == 0:
+            return "@ " + template_text
+        else:
+            return template_text + " @"
+    elif random_template["start_template"] == True:
+        return template_text + " @"
+    else:
+        return "@ " + template_text
 
 
 def generate_random_word(word_data):
@@ -341,7 +364,7 @@ def generate_random_word(word_data):
     else:
         random_word = random_word + particle
 
-    print(random_word)
+    # print(random_word)
     return random_word
 
 
@@ -396,9 +419,16 @@ def generate_syllables(word_data, requires_consonant_start, requires_consonant_e
         if phoneme == "r":
             phonemes.append(random.choice(consonants_not_available_at_start)["text"])
 
+    joined_phonemes = "".join(phonemes)
+
+    if len(joined_phonemes) > 10:
+        return generate_syllables(word_data, requires_consonant_start, requires_consonant_end)
+    else:
+        return joined_phonemes
+
     # print(consonants_and_vowels)
     # print("".join(phonemes))
-    return "".join(phonemes)
+    return joined_phonemes
 
 
 def choose_consonants_and_vowels(requires_consonant_start, requires_consonant_end):
@@ -441,4 +471,5 @@ def choose_consonants_and_vowels(requires_consonant_start, requires_consonant_en
 
 
 if __name__ == "__main__":
-    main()
+    station_name = main()
+    print(station_name)
