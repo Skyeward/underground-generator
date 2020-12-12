@@ -3,6 +3,7 @@
 #_____all
 #_____bank
 #Black_____
+#_____borough
 #_____bottom
 #_____bridge (exclude "_____ Bridge" template?)
 #_____bury
@@ -39,7 +40,9 @@
 #_____stead
 #_____stone
 #_____stow
+#_____thorpe
 #_____ton
+#_____tree
 #Up_____ <<< might not work, remove?
 #_____wake
 #_____wall
@@ -183,7 +186,9 @@
 #within a syllable, ban x*___x* eg. (bob, dreds)
 
 #LONG VOWELS NEED TO BE FOLLOWED BY A CONSONANT THAT'S ALLOWED AT THE START
-#WHERE THERE ARE DOUBLE CONSONANTS, THE IT MUST BE NON-START+START
+#WHERE THERE ARE DOUBLE CONSONANTS, THE IT MUST BE NON-START+START << PROBBLY WRONG, TRY NEXT LINE
+#WHERE THERE ARE DOUBLE CONSONANTS, THE IT MUST BE "(REQ VOWEL AFTER = FALSE) + START" 
+#IF THIS SEQUENCE IS "_x + _x", REMOVE ONE x
 
 import json
 import random
@@ -197,8 +202,16 @@ class WordData():
 
         self.consonants = []
         self.vowels = []
+        
+        self.get_consonants()
+        self.get_vowels()
+
         self.starting_consonants = []
         self.starting_vowels = []
+        self.long_vowels = []
+        self.short_vowels = []
+        self.consonants_available_at_start = []
+        self.consonants_not_available_at_start = []
 
 
     def get_consonants(self):
@@ -207,10 +220,7 @@ class WordData():
 
         for consonant in self.phonemes["consonants"]:
             if consonant["only_start"] == False:
-                self.starting_consonants.append(consonant)
-
-        self.consonants = self.phonemes["consonants"]
-        return self.consonants
+                self.consonants.append(consonant)
 
 
     def get_vowels(self):
@@ -218,7 +228,6 @@ class WordData():
             return self.vowels
 
         self.vowels = self.phonemes["vowels"]
-        return self.vowels
 
 
     def get_starting_consonants(self):
@@ -243,6 +252,50 @@ class WordData():
         return self.starting_vowels
 
 
+    def get_long_vowels(self):
+        if len(self.long_vowels) > 0:
+            return self.long_vowels
+
+        for vowel in self.phonemes["vowels"]:
+            if vowel["long_vowel"] == True:
+                self.long_vowels.append(vowel)
+        
+        return self.long_vowels
+
+
+    def get_short_vowels(self):
+        if len(self.short_vowels) > 0:
+            return self.short_vowels
+
+        for vowel in self.phonemes["vowels"]:
+            if vowel["long_vowel"] == False:
+                self.short_vowels.append(vowel)
+        
+        return self.short_vowels
+
+
+    def get_consonants_available_at_start(self):
+        if len(self.consonants_available_at_start) > 0:
+            return self.consonants_available_at_start
+
+        for consonant in self.phonemes["consonants"]:
+            if consonant["available_at_start"] == True:
+                self.consonants_available_at_start.append(consonant)
+
+        return self.consonants_available_at_start
+
+
+    def get_consonants_not_available_at_start(self):
+        if len(self.consonants_not_available_at_start) > 0:
+            return self.consonants_not_available_at_start
+
+        for consonant in self.phonemes["consonants"]:
+            if consonant["available_at_start"] == False:
+                self.consonants_not_available_at_start.append(consonant)
+
+        return self.consonants_not_available_at_start
+    
+
 def main():
     word_data = load_word_data()
     generate_random_word(word_data)
@@ -262,10 +315,9 @@ def load_word_data():
 
 
 def generate_random_word(word_data):
-    VOWELS = "aeiou"
+    VOWEL_CHARACTERS = "aeiou"
     random_particle = random.choice(word_data.particles)
     particle = random_particle["text"]
-    is_monosyllabic = random.choice([True, False])
 
     if random_particle["prefix"] == True:
         if random_particle["suffix"] == True:
@@ -277,26 +329,7 @@ def generate_random_word(word_data):
 
     print(particle)
 
-    if particle_is_prefix == True and particle[-1] in VOWELS:
-        consonants_and_vowels, random_word = generate_syllable(word_data, True, is_monosyllabic, True, False)
-        print("True, False")
-    elif particle_is_prefix == False and particle[0] in VOWELS:
-        consonants_and_vowels, random_word = generate_syllable(word_data, True, is_monosyllabic, False, True)
-        print("False, True")
-    else:
-        consonants_and_vowels, random_word = generate_syllable(word_data, True, is_monosyllabic, False, False)
-        print("False, False")
-
-    if is_monosyllabic == False:
-        requires_consonant_start = (consonants_and_vowels[-1] == "vowels")
-
-        if particle_is_prefix == False and particle[0] in VOWELS:
-            requires_consonant_end = True
-        else:
-            requires_consonant_end = False
-
-        consonants_and_vowels, addition_to_random_word = generate_syllable(word_data, False, True, requires_consonant_start, requires_consonant_end)
-        random_word += addition_to_random_word
+    #generate syllables
 
     if particle_is_prefix == True:
         random_word = particle + random_word
@@ -307,23 +340,57 @@ def generate_random_word(word_data):
     return random_word
 
 
-def generate_syllable(word_data, is_first_syllable, is_last_syllable, requires_consonant_start, requires_consonant_end):
+def generate_syllables(word_data, requires_consonant_start, requires_consonant_end):
     consonants_and_vowels = choose_consonants_and_vowels(requires_consonant_start, requires_consonant_end)
     phonemes = []
 
-    for item in consonants_and_vowels:
-        if is_first_syllable == True:
-            if item == "consonants":
-                random_phoneme = random.choice(word_data.get_starting_consonants())
-            else:
-                random_phoneme = random.choice(word_data.get_starting_vowels())
-        else:
-            if item == "consonants":
-                random_phoneme = random.choice(word_data.get_consonants())
-            else:
-                random_phoneme = random.choice(word_data.get_vowels())
-        
-        phonemes.append(random_phoneme["text"])
+    vowels = word_data.vowels 
+    starting_consonants = word_data.get_starting_consonants()
+    starting_vowels = word_data.get_starting_vowels()
+    short_vowels = word_data.get_short_vowels()
+    long_vowels = word_data.get_long_vowels()
+    consonants_available_at_start = word_data.get_consonants_available_at_start()
+    consonants_not_available_at_start = word_data.get_consonants_not_available_at_start()
+
+    # while len(phonemes) < phoneme_count:
+    #     if len(phonemes) == 0:
+    #         if consonants_and_vowels[0] == "vowel":
+    #             potential_phonemes = starting_vowels
+    #         else:
+    #             potential_phonemes = starting_consonants
+
+    #         random_phoneme = random.choice(potential_phonemes)
+    #         phonemes.append(random_phoneme)
+    #     elif len(phonemes) < (phoneme_count - 1):
+    #         if consonants_and_vowels[len(phonemes)] == "consonant" and consonants_and_vowels[len(phonemes) + 1] == "consonant":
+    #             #add two consonants
+    #             pass
+    #     elif len(phonemes) == (phoneme_count - 1):
+    #         pass
+    #     else:
+    #         previous_phoneme = phonemes[-1]
+    #         previous_is_vowel = ("long_vowel" in previous_phoneme)
+
+    #         if previous_is_vowel == True:
+    #             random_consonant = random.choice(consonants)
+    #         else:
+
+    for phoneme in consonants_and_vowels:
+        if phoneme == "V":
+            phonemes.append(random.choice(starting_vowels))
+        if phoneme == "C":
+            phonemes.append(random.choice(starting_consonants))
+        if phoneme == "v":
+            phonemes.append(random.choice(vowels))
+        if phoneme == "s":
+            phonemes.append(random.choice(short_vowels))
+        if phoneme == "l":
+            phonemes.append(random.choice(long_vowels))
+        if phoneme == "c":
+            phonemes.append(random.choice(consonants_available_at_start))
+        if phoneme == "r":
+            phonemes.append(random.choice(consonants_not_available_at_start))
+
 
     print(consonants_and_vowels)
     print("".join(phonemes))
@@ -331,29 +398,38 @@ def generate_syllable(word_data, is_first_syllable, is_last_syllable, requires_c
 
 
 def choose_consonants_and_vowels(requires_consonant_start, requires_consonant_end):
-    choices = ["consonants", "vowels"]
-    choice_indexes = [0, 1]
-    first_phoneme_weightings = [9, 1]
-    consonant_and_vowel_indexes = []
-    consonants_and_vowels = []
+    # consonant_to_consonant = ["cvc", "cvcvc"]
+    # consonant_to_vowel = ["cv", "cvcv", "cvccv"]
+    # vowel_to_consonant = ["vc", "vcvc", "vccvc"]
+    # vowel_to_vowel = ["vcv", "vccv", "vcvcv"]
 
-    if requires_consonant_start == True:
-        consonant_and_vowel_indexes.append(0)
-        consonant_and_vowel_indexes.append(1)
+    consonant_to_consonant = ["Csr", "Csrsr", "Cvcsr"]
+    consonant_to_vowel = ["Cl", "Cvcl", "Csrl", "Csrcl"]
+    vowel_to_consonant = ["Vr", "Vcsr", "Vrsr", "Vrcsr"]
+    vowel_to_vowel = ["Vcl", "Vrl", "Vrcl", "Vcvcl", "Vrsrl", "Vcsrl", "Vrvcl", "Vcvcl"]
+
+    #V = start vowel
+    #C = start consonant
+    #l = long vowel
+    #s = short vowel
+    #v = vowel
+    #r = consonant not available at start
+    #c = consonant available at start
+
+    if requires_consonant_start == True and requires_consonant_end == True:
+        return random.choice(consonant_to_consonant)
+    elif requires_consonant_start == True:
+        return random.choice(consonant_to_consonant + consonant_to_vowel)
+    elif requires_consonant_end == True:
+        if random.randrange(0, 10) == 0:
+            return random.choice(vowel_to_consonant)
+        else:
+            return random.choice(consonant_to_consonant)
     else:
-        random_choice = random.choices(choice_indexes, first_phoneme_weightings)[0]
-        consonant_and_vowel_indexes.append(random_choice)
-        consonant_and_vowel_indexes.append((random_choice + 1) % 2)
-
-    if requires_consonant_end == True and choice_indexes[-1] == 1:
-        consonant_and_vowel_indexes.append(0)
-    elif requires_consonant_end == False and random.randrange(0, 2) == 0:
-        consonant_and_vowel_indexes.append((choice_indexes[-1] + 1) % 2)
-
-    for i in consonant_and_vowel_indexes:
-        consonants_and_vowels.append(choices[i])
-
-    return consonants_and_vowels
+        if random.randrange(0, 10) == 0:
+            return random.choice(vowel_to_consonant + vowel_to_vowel)
+        else:
+            return random.choice(consonant_to_consonant + consonant_to_vowel)
 
 
 if __name__ == "__main__":

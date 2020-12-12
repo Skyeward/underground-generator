@@ -1191,6 +1191,11 @@
             "suffix":false
         },
         {
+            "text":"borough",
+            "prefix":false,
+            "suffix":true
+        },
+        {
             "text":"bottom",
             "prefix":false,
             "suffix":true
@@ -1386,7 +1391,17 @@
             "suffix":true
         },
         {
+            "text":"thorpe",
+            "prefix":false,
+            "suffix":true
+        },
+        {
             "text":"ton",
+            "prefix":false,
+            "suffix":true
+        },
+        {
+            "text":"tree",
             "prefix":false,
             "suffix":true
         },
@@ -1700,6 +1715,15 @@
                 "vowel_link_double_available":false
             },
             {
+                "text":"lf",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
                 "text":"lk",
                 "only_start":false,
                 "available_at_start":false,
@@ -1710,6 +1734,204 @@
             },
             {
                 "text":"ll",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"lm",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ls",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"lt",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"m",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":
+                [
+                    "ng"
+                ],
+                "requires_vowel_before":false,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":true
+            },
+            {
+                "text":"mb",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"mp",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ms",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"n",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":
+                [
+                    "g",
+                    "gl",
+                    "gr",
+                    "gs"
+                ],
+                "requires_vowel_before":false,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":true
+            },
+            {
+                "text":"nd",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ng",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"np",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ns",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"nt",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"nv",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"p",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":true
+            },
+            {
+                "text":"ph",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"phr",
+                "only_start":true,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"pl",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"pr",
+                "only_start":false,
+                "available_at_start":true,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":false,
+                "requires_vowel_after":true,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"ps",
+                "only_start":false,
+                "available_at_start":false,
+                "blacklist_next_consonant":null,
+                "requires_vowel_before":true,
+                "requires_vowel_after":false,
+                "vowel_link_double_available":false
+            },
+            {
+                "text":"pt",
                 "only_start":false,
                 "available_at_start":false,
                 "blacklist_next_consonant":null,
